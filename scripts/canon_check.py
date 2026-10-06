@@ -24,6 +24,8 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PROJECTS = ROOT.parent
+# katalogi po lokalnym uruchomieniu testow - nie sa w gicie, wiec nie sa tez kopia
+CACHE = {"__pycache__", ".pytest_cache"}
 KOPIE = {
     "reviewer-en": ("awesome-matematic-skills-en", "content-quality/skills/reviewer-en"),
     "marko-pl-content": ("awesome-matematic-skills-pl", "jakosc-tresci/skills/marko-pl-content"),
@@ -50,7 +52,8 @@ def pliki_head(repo, sciezka):
 def pliki_dysk(katalog):
     return {
         p.relative_to(katalog).as_posix(): norm(p.read_bytes())
-        for p in sorted(katalog.rglob("*")) if p.is_file()
+        for p in sorted(katalog.rglob("*"))
+        if p.is_file() and not CACHE.intersection(p.relative_to(katalog).parts)
     }
 
 
