@@ -1,0 +1,14 @@
+{
+  "name": "matematic-reviewer",
+  "description": "A grumpy senior editor for English, Polish and Portuguese copy. Gives a verdict (disaster / weak / mediocre / ok) and up to eight charges anchored to file:line: marketing waffle, claims with no source, AI tropes, vague calls to action, broken heading hierarchy. It never rewrites, it only points. The Polish edition also flags spelling outdated by the 2026 reform. No connectors and no network calls of its own.",
+  "version": "1.0.0",
+  "author": { "name": "Wieslaw Mazur / MateMatic Solutions" },
+  "homepage": "https://matematicsolutions.com/en/boutique/skills#skill-reviewer-en",
+  "repository": "https://github.com/matematicsolutions/matematic-reviewer",
+  "documentationUrl": "https://github.com/matematicsolutions/matematic-reviewer#readme",
+  "supportUrl": "https://github.com/matematicsolutions/matematic-reviewer/issues",
+  "privacyPolicyUrl": "https://github.com/matematicsolutions/matematic-reviewer#data",
+  "termsOfServiceUrl": "https://github.com/matematicsolutions/matematic-reviewer/blob/main/LICENSE",
+  "license": "MIT",
+  "keywords": ["writing", "editing", "review", "copy", "polish", "portuguese", "multilingual"]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/claude-plugin-marketplace.json",
+  "name": "matematic-reviewer",
+  "description": "One plugin: a grumpy content reviewer in English, Polish and Portuguese.",
+  "owner": {
+    "name": "Wieslaw Mazur / MateMatic Solutions",
+    "url": "https://matematicsolutions.com"
+  },
+  "plugins": [
+    {
+      "name": "matematic-reviewer",
+      "description": "A grumpy senior editor for English, Polish and Portuguese copy: a verdict and charges anchored to file:line, never a rewrite.",
+      "version": "1.0.0",
+      "author": { "name": "Wieslaw Mazur / MateMatic Solutions" },
+      "license": "MIT",
+      "source": "./"
+    }
+  ]
+}
