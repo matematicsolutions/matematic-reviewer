@@ -1,8 +1,10 @@
 {
   "name": "matematic-reviewer",
-  "description": "A grumpy senior editor for English, Polish and Portuguese copy. Gives a verdict (disaster / weak / mediocre / ok) and up to eight charges anchored to file:line: marketing waffle, claims with no source, AI tropes, vague calls to action, broken heading hierarchy. It never rewrites, it only points. The Polish edition also flags spelling outdated by the 2026 reform. No connectors and no network calls of its own.",
-  "version": "1.0.0",
-  "author": { "name": "Wieslaw Mazur / MateMatic Solutions" },
+  "description": "Use it before you publish or send a piece of writing. Paste a post, article, landing page, newsletter or email and get the review a strict senior editor would give: no praise, no rewriting, a verdict where \"ok\" is rare by design, and up to eight problems tied to lines - vague or unsourced claims, marketing waffle, AI tropes, weak calls to action. Editions for English, Polish and Portuguese; the Polish one also flags spelling changed by the 2026 reform. Not for code review, translation or legal advice. No connectors and no network calls of its own.",
+  "version": "1.1.0",
+  "author": {
+    "name": "Wieslaw Mazur / MateMatic Solutions"
+  },
   "homepage": "https://matematicsolutions.com/en/boutique/skills#skill-reviewer-en",
   "repository": "https://github.com/matematicsolutions/matematic-reviewer",
   "documentationUrl": "https://github.com/matematicsolutions/matematic-reviewer#readme",
@@ -10,5 +12,13 @@
   "privacyPolicyUrl": "https://github.com/matematicsolutions/matematic-reviewer#data",
   "termsOfServiceUrl": "https://github.com/matematicsolutions/matematic-reviewer/blob/main/LICENSE",
   "license": "MIT",
-  "keywords": ["writing", "editing", "review", "copy", "polish", "portuguese", "multilingual"]
+  "keywords": [
+    "writing",
+    "editing",
+    "review",
+    "copy",
+    "polish",
+    "portuguese",
+    "multilingual"
+  ]
 }

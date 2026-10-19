@@ -27,8 +27,8 @@ when you want the text changed.
 
 ## What it reviews
 
-By default the uncommitted changes in `.md`, `.html` and `.txt` files (`git diff HEAD`).
-Otherwise the content files edited in the session, a file you name, or text you paste.
+Paste the text, or name a file. With neither, inside a git repository it reviews the uncommitted
+changes in `.md`, `.html` and `.txt` files (`git diff HEAD`), then the content files edited in the session.
 Say "reviewer, look at this", "marko?" or "revisa isso".
 
 ## House style is a default

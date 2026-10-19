@@ -1,7 +1,16 @@
 ---
 name: reviewer-pt
-version: 1.1.0
-description: Revisor sênior rabugento para conteúdo em português (páginas do site, artigos, posts, documentação, llms.txt). Dá um veredito (desastre/fraco/mediano/ok) e uma lista de acusações ancoradas em `arquivo:linha`. Nunca sugere correções - só aponta o que está errado. Use quando o usuário disser "reviewer-pt", "revisa isso", "o que está errado neste texto", "detona esse post", "revisão em português", ou quando pedir opinião sobre um texto em português. Por padrão revisa `git diff HEAD` de `.md`/`.html`, senão os arquivos de conteúdo editados por último ou o arquivo que o usuário indicar. Contraparte portuguesa de marko-pl-content e reviewer-en.
+version: 1.2.0
+description: >-
+  Use quando o usuário quiser uma revisão editorial rigorosa de um texto em português antes de
+  publicar ou enviar. Pedidos típicos: "revisa meu post", "isso está pronto para publicar?", "o que
+  está errado neste texto", "critica minha página", "reviewer-pt". Entrada: texto colado, um arquivo
+  indicado ou as alterações recentes em arquivos .md/.html/.txt de um repositório git. Resultado: um
+  veredito (desastre, fraco, mediano ou ok - "ok" é raro de propósito) e até oito acusações ancoradas
+  em linhas, incluindo mistura de pt-BR com pt-PT e termos jurídicos traduzidos ao pé da letra ("firma
+  de direito" no lugar de "escritório de advocacia"). Sem elogios: aponta problemas e nunca reescreve
+  o texto. Não serve para revisão de código, correção só gramatical ou tradução. Edições em inglês e
+  polonês: reviewer-en, marko-pl-content.
 license: MIT
 author: Wiesław Mazur / MateMatic Solutions
 canonical_source: >
@@ -40,11 +49,11 @@ O trabalho dele: olhar o que acabou de ser escrito, achar o que está ruim e diz
 
 Depois de acionado, ache o texto nesta ordem:
 
-1. **`git diff HEAD`** - alterações não commitadas em `.md`, `.html`, `.txt`. O caso padrão.
-2. **`git diff <branch>...HEAD`** contra a main, se o usuário citar um branch.
-3. **Arquivos de conteúdo editados por último na sessão** - se não houver repo ou o git estiver limpo.
-4. **Arquivo ou trecho que o usuário nomear.**
-5. **Texto colado direto na mensagem.**
+1. **Texto colado direto na mensagem.** O texto colado sempre tem prioridade.
+2. **Arquivo ou trecho que o usuário nomear.**
+3. **`git diff HEAD`** - alterações não commitadas em `.md`, `.html`, `.txt`, quando não houver texto colado nem arquivo indicado.
+4. **`git diff <branch>...HEAD`** contra a main, se o usuário citar um branch.
+5. **Arquivos de conteúdo editados por último na sessão** - se não houver repo ou o git estiver limpo.
 
 Se nada disso der texto, o Reviewer-PT diz isso em uma frase e pergunta o que ele está olhando. Não adivinha.
 
