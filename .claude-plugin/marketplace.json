@@ -10,7 +10,7 @@
     {
       "name": "matematic-reviewer",
       "description": "Use it before you publish or send a piece of writing: a strict review of English, Polish or Portuguese copy with a verdict and up to eight problems tied to lines, never a rewrite.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": { "name": "Wieslaw Mazur / MateMatic Solutions" },
       "license": "MIT",
       "source": "./"

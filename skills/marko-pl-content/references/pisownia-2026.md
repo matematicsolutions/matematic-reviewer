@@ -11,7 +11,7 @@ Od 1 stycznia 2026 r. jedynym ważnym źródłem zasad pisowni jest dokument Rad
 
 To nie są literówki. Model językowy uczył się na tekstach sprzed reformy i pisze po staremu, a korektor pisowni oparty na starym słowniku uznaje starą formę za poprawną. Błąd przechodzi więc przez obie kontrole, także w tekstach pisanych już po wejściu reformy.
 
-## Zmiany, które skaner sprawdza
+## Najczęstsze zmiany do sprawdzenia
 
 | Punkt | Co się zmieniło | Stara forma (błąd) | Nowa forma |
 |---|---|---|---|
@@ -27,7 +27,7 @@ To nie są literówki. Model językowy uczył się na tekstach sprzed reformy i 
 
 Punkt 8b (nazwy geograficzne) Rada wycofała 7 listopada 2025 r. - obowiązuje dawna zasada.
 
-## Czego skaner nie sprawdza
+## Punkty, których nie rozstrzygniesz z samej formy
 
 - **pkt 2** - egzemplarz wyrobu marki wielką literą. Rozstrzyga znaczenie zdania.
 - **pkt 5** - przymiotniki od nazw osobowych małą literą. Potrzebny słownik.
@@ -39,17 +39,10 @@ Brak zarzutu w tych punktach nie znaczy, że tekst jest poprawny. Znaczy tylko, 
 
 ## Trzy pułapki - kiedy „nie” rozdzielnie jest poprawne
 
-Skaner zwraca kandydatów. Większość z nich okazuje się poprawna. Każdego oceń w kontekście.
+Większość miejsc, które wyglądają na błąd, okazuje się poprawna. Każde oceń w kontekście.
 
 1. **Przeciwstawienie.** „Nie” pisze się rozdzielnie, gdy jednocześnie zaprzecza i przeciwstawia jedną cechę drugiej. Wyjątek zostaje w zasadach z 2026 r. Przykłady: „tanie, nie darmowe”, „to decyzja organizacyjna, nie techniczna”, „szkic, a nie zatwierdzony dokument”.
    - Uwaga: samo „ale” w zdaniu nie robi przeciwstawienia. „Wybór szybki, ale nieprzypadkowy” łączy dwie cechy, nie zamienia jednej na drugą - więc łącznie.
    - Wyliczenie cech też nie jest przeciwstawieniem: „bezterminowa, zbywalna, nieograniczona terytorialnie”.
 2. **„To nie…”** - gdy „nie” zaprzecza całemu orzeczeniu, a nie przymiotnikowi: „przesunięty termin to nie przesunięta odpowiedzialność”.
-3. **Zaimek, nie partykuła.** „Odpowiadam na nie szybciej niż zwykle” - tu „nie” znaczy „na te pytania”. Skaner pomija „nie” po przyimku, ale sprawdź w wątpliwych zdaniach.
-
-
-## Znane ograniczenia skanera
-
-- Rozpoznaje przymiotniki i imiesłowy po końcówce, nie po słowniku. Czasowniki i rzeczowniki o podobnej końcówce („pyta”, „zna”, „maszyny”) odsiewa lista wyjątków - na tekstach o innym słownictwie może przepuścić szum.
-- Polskie złożenia z łącznikiem rozpoznaje po znaku diakrytycznym albo typowej końcówce. Przeoczy wyraz bez obu („mega-dokument”).
-- Angielski tekst w pliku `.md` lub `.txt` bez oznaczenia języka jest skanowany. Plik HTML z `lang` innym niż polski jest pomijany i liczony w mianowniku.
+3. **Zaimek, nie partykuła.** „Odpowiadam na nie szybciej niż zwykle” - tu „nie” znaczy „na te pytania”.

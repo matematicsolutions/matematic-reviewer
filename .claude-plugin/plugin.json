@@ -1,7 +1,7 @@
 {
   "name": "matematic-reviewer",
   "description": "Use it before you publish or send a piece of writing. Paste a post, article, landing page, newsletter or email and get the review a strict senior editor would give: no praise, no rewriting, a verdict where \"ok\" is rare by design, and up to eight problems tied to lines - vague or unsourced claims, marketing waffle, AI tropes, weak calls to action. Editions for English, Polish and Portuguese; the Polish one also flags spelling changed by the 2026 reform. Not for code review, translation or legal advice. No connectors and no network calls of its own.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": {
     "name": "Wieslaw Mazur / MateMatic Solutions"
   },

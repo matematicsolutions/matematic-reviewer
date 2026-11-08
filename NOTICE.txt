@@ -6,9 +6,10 @@ MIT licence, Copyright (c) 2026 Julian Galluzzo. The upstream licence text ships
 LICENSES/marko-MIT.txt and remains in force for the adapted parts: the verdict format
 and the "no fixes" rule, kept 1:1.
 
-Charge categories, the Polish 2026 spelling scanner, the Portuguese patterns, language
+Charge categories, the Polish 2026 spelling guide, the Portuguese patterns, language
 and scope: Wieslaw Mazur / MateMatic Solutions, MIT licence (see LICENSE).
 
 Canonical sources: reviewer-en lives in matematicsolutions/awesome-matematic-skills-en,
 marko-pl-content in matematicsolutions/awesome-matematic-skills-pl; this repository is
-the home of reviewer-pt. scripts/canon_check.py keeps the copies identical.
+the home of reviewer-pt. This repository is the directory edition: text files only, so the
+Polish spelling scanner stays in the awesome-matematic-skills-pl source.

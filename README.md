@@ -28,7 +28,7 @@ when you want the text changed.
 ## What it reviews
 
 Paste the text, or name a file. With neither, inside a git repository it reviews the uncommitted
-changes in `.md`, `.html` and `.txt` files (`git diff HEAD`), then the content files edited in the session.
+changes in `.md`, `.html` and `.txt` files (`git diff HEAD`), then the content files edited in the session. Claude asks for your permission before it runs git.
 Say "reviewer, look at this", "marko?" or "revisa isso".
 
 ## House style is a default
@@ -54,10 +54,9 @@ Single-skill zips, no plugin needed, are on the MateMatic Boutique:
 
 The skills have no connectors and make no network calls of their own. They read files in
 your project and the text in your conversation, which Claude processes the same way as any
-other message you send it. The Polish spelling scanner (`skills/marko-pl-content/scripts/`)
-runs locally on the Python standard library and does not touch the network.
+other message you send it. This edition ships text files only: no scripts and no programs.
 
 ## Licence
 
 MIT. Adapted from [julianmemberstack/marko](https://github.com/julianmemberstack/marko) (MIT);
-see `NOTICE` for full attribution.
+see `NOTICE.txt` for full attribution.

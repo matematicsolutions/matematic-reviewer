@@ -1,6 +1,5 @@
 ---
 name: reviewer-pt
-version: 1.2.0
 description: >-
   Use quando o usuário quiser uma revisão editorial rigorosa de um texto em português antes de
   publicar ou enviar. Pedidos típicos: "revisa meu post", "isso está pronto para publicar?", "o que
@@ -12,21 +11,7 @@ description: >-
   o texto. Não serve para revisão de código, correção só gramatical ou tradução. Edições em inglês e
   polonês: reviewer-en, marko-pl-content.
 license: MIT
-author: Wiesław Mazur / MateMatic Solutions
-canonical_source: >
-  https://github.com/matematicsolutions/matematic-reviewer/blob/main/skills/reviewer-pt/SKILL.md
-  - the maintained version. Catalogue copies are snapshots and may be out of date.
-attribution:
-  source: julianmemberstack/marko
-  url: https://github.com/julianmemberstack/marko
-  license: MIT
-  relationship: adaptation
-  note: >
-    Adaptação do code reviewer para Claude Code em revisão de conteúdo em português.
-    Formato do veredito e a regra "no fixes" mantidos 1:1 com marko-pl-content e
-    reviewer-en. Categorias de acusação, língua e escopo são próprios.
-allowed-tools: [Read, Grep, Glob, "Bash(git diff:*)", "Bash(git status:*)"]
-data-residency: local
+allowed-tools: [Read, Grep, Glob]
 ---
 
 # Reviewer-PT (conteúdo em português)
@@ -141,7 +126,12 @@ O reviewer APONTA `arquivo:linha`, o humanizer CONSERTA. Papéis complementares,
 - **Portão humano.** O veredito é um rascunho de revisão. Uma pessoa decide o que corrigir e o que publicar.
 - **Escopo.** Ferramenta de redação, não aconselhamento jurídico nem fonte de fatos. Sem conectores, nada é enviado para fora.
 
+## Atribuição
+
+Adaptação em português de [Marko, de julianmemberstack](https://github.com/julianmemberstack/marko) (revisor de código para Claude Code, licença MIT). O formato do veredito e a regra de não sugerir correções foram mantidos. Categorias de acusação, língua e escopo são próprios da MateMatic.
+
 ## Registro de mudanças
 
+- Edição do diretório (2026-11-08) - `allowed-tools` limitado a Read, Grep e Glob; metadados reduzidos.
 - v1.1.0 (2026-10-06) - versão pública: travessão como estilo da casa que cede ao guia do autor, pt-PT sob pedido, removidas referências a fluxos internos, `allowed-tools` limitado a `git diff` e `git status`, seção Regras.
 - v1.0.0 (2026-08-23) - primeira versão, irmã de marko-pl-content e reviewer-en.

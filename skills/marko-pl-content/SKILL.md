@@ -1,6 +1,5 @@
 ---
 name: marko-pl-content
-version: 1.3.0
 description: >-
   Używaj, gdy użytkownik chce surowej oceny redakcyjnej polskiego tekstu przed publikacją albo
   wysyłką. Typowe prośby: „sprawdź mój post”, „czy to nadaje się do publikacji”, „co jest nie tak z
@@ -11,19 +10,7 @@ description: >-
   nigdy nie przepisuje tekstu. Nie do przeglądu kodu, samej korekty ani tłumaczenia. Nie wywołuj, gdy
   „Marko” to imię osoby („Marko z designu”). Wersje EN i PT: reviewer-en, reviewer-pt.
 license: MIT
-attribution:
-  source: julianmemberstack/marko
-  url: https://github.com/julianmemberstack/marko
-  license: MIT
-  relationship: adaptation
-  note: >
-    Adaptacja code reviewera dla Claude Code na polski review treści MateMatic. Format
-    werdyktu i zasada „no fixes” zachowane 1:1. Kategorie zarzutów, język i zakres własne.
-    Odpowiednik EN: reviewer-en.
-allowed-tools: [Read, Grep, Glob, "Bash(git diff:*)", "Bash(git status:*)"]
-data-residency: local
-requires-human-approval: false
-pii-egress: none
+allowed-tools: [Read, Grep, Glob]
 ---
 
 # Marko-PL (content)
@@ -93,35 +80,22 @@ Jeśli jedyne zarzuty to drobiazgi - tekst jest blisko "ok". Marko to mówi.
 
 Zmiany zasad pisowni Rady Języka Polskiego obowiązują od 1 stycznia 2026 r. Ściąga ze zmianami, wyjątkami i źródłami: `references/pisownia-2026.md`. Przeczytaj ją przed pierwszą oceną.
 
-1. **Uruchom skaner** na recenzowanych plikach (lub na tekście wklejonym - przez `-` i standardowe wejście):
+1. **Przejrzyj tekst według punktów ze ściągi.** Szukaj przede wszystkim „nie” pisanego rozdzielnie z imiesłowem lub przymiotnikiem, cząstki „by” przy spójniku, „pół” w połączeniach typu „półżartem” oraz przedrostków z łącznikiem.
 
-   ```bash
-   python scripts/skan_pisowni.py PLIK_LUB_KATALOG
-   ```
-
-   Ścieżka `scripts/` jest względna wobec katalogu tego skilla.
-
-2. **Odczytaj kod wyjścia.**
-   - `0` - zero kandydatów w przeskanowanych plikach.
-   - `1` - są kandydaci do oceny.
-   - `2` - nic nie przeskanowano. To nie jest „ok”. Nie wystawiaj werdyktu o pisowni, powiedz jednym zdaniem, że pisowni nie sprawdzono.
-
-3. **Oceń każdego kandydata w kontekście.** Skaner podaje kandydatów, nie błędy - większość kandydatów okazuje się poprawna. Zarzutem jest tylko forma, która nie mieści się w żadnym wyjątku ze ściągi:
+2. **Oceń każde znalezione miejsce w kontekście.** Większość miejsc, które wyglądają na błąd, okazuje się poprawna. Zarzutem jest tylko forma, która nie mieści się w żadnym wyjątku ze ściągi:
    - przeciwstawienie („tanie, nie darmowe”, „szkic, a nie zatwierdzony dokument”) - poprawne,
    - „to nie…” zaprzeczające orzeczeniu - poprawne,
    - „nie” jako zaimek („odpowiadam na nie szybciej”) - poprawne,
    - dwie cechy połączone „ale” albo wyliczenie cech - to nie przeciwstawienie, więc błąd.
 
-   Znacznik `[przeciwstawienie?]` w wyniku to podpowiedź, nie rozstrzygnięcie. Myli się w obie strony.
-
-4. **Zapisz zarzut** w zwykłym formacie, z kotwicą z wyniku skanera. Treść zarzutu nazywa formę i punkt komunikatu, bez podawania poprawnej wersji, np.:
+3. **Zapisz zarzut** w zwykłym formacie, z kotwicą `plik:linia`. Treść zarzutu nazywa formę i punkt komunikatu, bez podawania poprawnej wersji, np.:
 
    ```
    3. `aktualnosci/wpis.html:12` - „nie sprawdzona” rozdzielnie, pisownia sprzed reformy 2026 (pkt 4).
    ```
 
    - Więcej niż trzy błędy pisowni w jednym pliku: jeden zbiorczy zarzut z listą linii, żeby nie zająć limitu ośmiu zarzutów.
-   - Skaner nie sprawdza punktów 2, 5, 7, 8a i 8d. Brak zarzutu w tych punktach nie oznacza poprawnej pisowni.
+   - To przegląd czytelniczy, a nie pomiar. Brak zarzutu nie dowodzi poprawnej pisowni.
 
 ## Format wyjścia
 
